@@ -53,7 +53,7 @@ def auth_gate():
         password = st.text_input("Kata laluan akses", type="password")
         submitted = st.form_submit_button("Log masuk", type="primary")
     if submitted:
-        admin_pw = get_secret("ADMIN_PASSWORD")
+        admin_pw = get_secret("123")
         viewer_pw = get_secret("VIEW_PASSWORD")
         if secure_equal(password, admin_pw):
             st.session_state["access_role"] = "admin"
